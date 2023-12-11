@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>BOT</title>
+    </head>
+    <body>
+        <h1>Hello</h1>
+        <div id = "TextBoxBuy">
+            <h2>Buy and Sell</h2>
+            <label for = "nameBox">Name</label>
+            <input type = "text" id = "nameBox" style = "align-items: center;">
+            <br>
+            
+            <label for = "priceBox">Price</label>
+            <input type = "text" id = "priceBox" style = "align-items: center;">
+            <br>
+            <button id = "Buy">Buy</button>
+            <button id = "Sell">Sell</button>
+        </div>
+
+        <div>
+            <table id = "myTable">
+                <tr>
+                    <td style = "font-weight: bold;">ID</td>
+                    <td style = "font-weight: bold;">Method</td>
+                    <td style = "font-weight: bold;">Name</td>
+                    <td style = "font-weight: bold;">Price</td>
+                    <td style = "font-weight: bold;">Move</td>
+                </tr>
+            </table>
+        </div>
+
+        <a href = "./sent-sheet"><button type = "submit" id = "pushToSheet">Push to sheet</button></a>
+
+        <script src="script.js"></script>
+    </body>
+</html>

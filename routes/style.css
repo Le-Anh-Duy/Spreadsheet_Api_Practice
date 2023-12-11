@@ -1,0 +1,14 @@
+#TextBoxBuy {
+    width: 300px;
+    border: 5px solid black;
+    padding: 10px;
+    margin: 10px;
+    background-color: beige;
+}
+#nameBox {
+    align-items: center;
+}
+table, th, td {
+    border: 1px solid black;
+    width:500px;
+}
