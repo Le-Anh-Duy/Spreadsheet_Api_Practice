@@ -4,8 +4,9 @@ const path = require("path")
 const router = express.Router();
 console.log("hello")
 
-router.get("/sent-sheet", (req, res) => {
-    res.send("hihi")
+router.post("sent-table/", (req, res) => {
+    console.log("hihi")
+    console.log(req.headers, req.body.hihi)
 })
 
 router.get("/script.js", (req, res, next) => {

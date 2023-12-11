@@ -50,6 +50,15 @@ class newRow {
         this.dwButton.addEventListener("click", this.dwButtonBehavior)
     }
 
+    convert_to_json() {
+        return {
+            ID: this.ID.innerText,
+            method: this.method.innerText,
+            name: this.name.innerText,
+            price: this.price.innerText 
+        }
+    }
+
     interChange(other) {
         let temp = this.ID.innerText
         this.ID.innerText = other.ID.innerText
@@ -96,4 +105,35 @@ sell.addEventListener("click", () =>{
     const new_row = new newRow("sell", strName, strPrice, table.length)
     // new_row.ID.innerText = 123;
     table.push(new_row)
+})
+
+const sentBtn = document.getElementById("pushToSheet")
+
+sentBtn.addEventListener("click", () => {
+    // console.log()
+    console.log(table)
+
+    toSend = []
+    table.forEach(element => {
+        console.log("huhu", element.convert_to_json())
+        toSend.push(element.convert_to_json())
+    });
+
+    console.log("sent", toSend[0].method);
+    // console.log("")
+    fetch("http://localhost:3000", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'applicatio/json'
+          },
+        body: {hihi: "asd"}
+    })
+    .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        console.log('ok')
+        return response.json();
+    })
+
 })
